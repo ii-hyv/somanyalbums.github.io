@@ -17,15 +17,15 @@ function Home() {
 
     return (
         <div className="screen-container">
-            <h1>Album Rater</h1>
-            <p>Find an album and give it a rating from 1 to 10.</p>
+            <h1>So Many Albums</h1>
+            <p>Find an album and give it a rating.</p>
 
             <form onSubmit={handleSearch} className="search-form">
                 <input
                     type="text"
                     value={searchText}
                     onChange={(event) => setSearchText(event.target.value)}
-                    placeholder="Type an album name..."
+                    placeholder="Type an album name"
                     className="search-input"
                 />
                 <Button text="Search" type="submit" />

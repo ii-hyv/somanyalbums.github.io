@@ -12,7 +12,7 @@ function App() {
             <style>{`
         body {
           font-family: Arial, sans-serif;
-          background-color: #f4f4f9;
+          background-color: #28205c;
           color: #333;
           margin: 0;
           padding: 20px;
@@ -23,8 +23,6 @@ function App() {
           text-align: center;
           background: white;
           padding: 40px;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .search-form {
           display: flex;
@@ -45,7 +43,6 @@ function App() {
           background-color: #0056b3;
           color: white;
           border: none;
-          border-radius: 4px;
           cursor: pointer;
         }
         .simple-button:hover {
