@@ -18,7 +18,7 @@ function Home() {
     return (
         <div className="screen-container">
             <h1>So Many Albums</h1>
-            <p>Find an album and give it a rating.</p>
+            <p>Search for an album/artist.</p>
 
             <form onSubmit={handleSearch} className="search-form">
                 <input

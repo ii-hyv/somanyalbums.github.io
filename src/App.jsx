@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Results from './Results';
 import Rate from "./Rate.jsx";
+import MyRatings from './MyRatings.jsx';
+import TopBar from './TopBar.jsx';
 import 'water.css/out/dark.min.css';
 
 
@@ -29,12 +31,33 @@ body {
           justify-content: center;
           gap: 10px;
         }
+        .rating-form {
+          margin: 25px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+        .rating-select {
+        width: 80px;
+          padding: 10px 15px;
+          font-size: 16px;
+          background-color: #222426;
+          color: #ffffff;
+          border: 1px solid #555;
+          border-radius: 1px;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
       `}</style>
+
+          <TopBar />
 
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/results" element={<Results />} />
               <Route path="/rate" element={<Rate />} />
+              <Route path="/my-ratings" element={<MyRatings />} />
           </Routes>
       </BrowserRouter>
   );
