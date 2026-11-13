@@ -8,15 +8,14 @@ export default function Rate() {
     const [searchParams] = useSearchParams();
     const album = searchParams.get("album") || "Unknown Album";
     const artist = searchParams.get("artist") || "Unknown Artist";
+    const imageUrl = searchParams.get("image");
     const [rating, setRating] = useState(5);
     const [savedMessage, setSavedMessage] = useState("");
 
 
     // unique name to identify this specific album in storage
 
-    const albumKey = `${album} 
-
-${artist}`;
+    const albumKey = `${album}-${artist}`;
 
     // check if we already rated this album earlier
 
@@ -45,8 +44,18 @@ ${artist}`;
     return (
         <div className="screen-container">
             <h2>Rate Album</h2>
+
+            <img
+                src={imageUrl}
+                alt={`${album} cover`}
+                style={{ width: '200px', height: '200px', objectFit: 'cover', borderRadius: '8px', marginBottom: '15px', boxShadow: '0 4px 8px rgba(0,0,0,0.5)' }}
+            />
+
+
+
             <p><strong>{album}</strong></p>
             <p>by {artist}</p>
+
 
             <form onSubmit={handleSave} className="rating-form">
                 <label htmlFor="rating-select" style={{ fontWeight: 'bold' }}>

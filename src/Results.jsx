@@ -74,7 +74,10 @@ export default function Results() {
                             </div>
                             <Button
                                 text="Rate"
-                                onClick={() => navigate(`/rate?album=${encodeURIComponent(album?.name)}&artist=${encodeURIComponent(album?.artist)}`)}
+                                onClick={() => {
+                                    const imageUrl = album?.image?.[3]?.['#text'] || album?.image?.[2]?.['#text'] || '';
+                                    navigate(`/rate?album=${encodeURIComponent(album?.name)}&artist=${encodeURIComponent(album?.artist)}&image=${encodeURIComponent(imageUrl)}`);
+                                }}
                             />
                         </li>
                     ))}
