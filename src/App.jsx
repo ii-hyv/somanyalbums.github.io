@@ -4,6 +4,7 @@ import Results from './Results';
 import Rate from "./Rate.jsx";
 import MyRatings from './MyRatings.jsx';
 import TopBar from './TopBar.jsx';
+import Footer from './Footer.jsx';
 import 'water.css/out/dark.min.css';
 
 
@@ -59,7 +60,9 @@ body {
               <Route path="/rate" element={<Rate />} />
               <Route path="/my-ratings" element={<MyRatings />} />
           </Routes>
+          <Footer />
       </HashRouter>
+
   );
 }
 export default App
