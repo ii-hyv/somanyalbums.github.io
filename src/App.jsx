@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Results from './Results';
 import Rate from "./Rate.jsx";
@@ -9,7 +9,7 @@ import 'water.css/out/dark.min.css';
 
 function App() {
   return (
-      <BrowserRouter>
+      <HashRouter>
 
           <style>{`
         /* 1. Change Water.css's built-in theme colors */
@@ -59,7 +59,7 @@ body {
               <Route path="/rate" element={<Rate />} />
               <Route path="/my-ratings" element={<MyRatings />} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
   );
 }
 export default App
