@@ -1,28 +1,34 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Home';
+import Results from './Results';
+import Rate from "./Rate.jsx";
 
 
 
 function App() {
   return (
       <BrowserRouter>
-        {/*<div className="min-h-screen bg-gray-50 text-gray-900 p-4 font-sans">*/}
-        {/*  <Routes>*/}
-        {/*    <Route path="/" element={<Home />} />*/}
-            <style>{`
+
+          <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+        * {
+          font-family: 'Roboto Slab', sans-serif;
+          box-sizing: border-box;
+        }
         body {
-          font-family: Arial, sans-serif;
           background-color: #28205c;
-          color: #333;
+          color: #ffffff;
           margin: 0;
           padding: 20px;
         }
         .screen-container {
-          max-width: 600px;
+          max-width: 1000px;
           margin: 50px auto;
           text-align: center;
-          background: white;
+          background: #1c1c1c;
           padding: 40px;
+          border-radius: 10px;
         }
         .search-form {
           display: flex;
@@ -36,6 +42,7 @@ function App() {
           width: 70%;
           border: 1px solid #ccc;
           border-radius: 4px;
+          color: #111111;
         }
         .simple-button {
           padding: 10px 20px;
@@ -44,17 +51,25 @@ function App() {
           color: white;
           border: none;
           cursor: pointer;
+                    border-radius: 10px;
         }
         .simple-button:hover {
           background-color: #004494;
         }
-        h1   {color: black;}
+        a {
+        color: #66b3ff;
+        }
+        h1   {color: white;}
+
+        p {color: white;}
       `}</style>
 
           <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/results" element={<Results />} />
+              <Route path="/rate" element={<Rate />} />
           </Routes>
-      // </BrowserRouter>
+      </BrowserRouter>
   );
 }
 export default App
